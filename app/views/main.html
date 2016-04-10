@@ -1,0 +1,19 @@
+<div class="row" ng-controller='MainCtrl'>
+  <div class="jumbotron">
+    <h1>Github Repo Finder</h1>
+    <p class="lead">Mitsuaki Uchimoto</p>
+  </div>
+  <form class="col-md-6 col-md-offset-3" ng-submit='getRepos(username)' ng-model='username'>
+    <div class="row">
+      <pre>
+        <p> Please enter github user name below: </p>
+          {{status}}
+        <div class="input-field">
+          <input id="username" class="form-control" type="username" ng-model='username'>
+        </div>
+        <button class="btn btn-lg btn-success" type="submit" name="action">Search for Repos</button>
+      </pre>
+    </div>
+  </form>
+  <github-results class="col-md-6 col-md-offset-3" response="response" />
+</div>
